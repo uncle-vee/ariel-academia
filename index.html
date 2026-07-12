@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ariel Academia - Premium EdTech Platform for Digital Literacy, AI, and Tech Skills. Centralized event registrations, course vaults, and certificates.">
+  <title>Ariel Academia | Digital Literacy & AI School</title>
+  
+  <!-- Manifest & PWA Theme -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#10b981">
+  
+  <!-- Web Fonts (Premium Typography) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <!-- Premium Glassmorphic Header -->
+  <header class="app-header">
+    <div class="header-container">
+      <a href="#/" class="logo-area">
+        <div class="logo-icon">
+          <i class="fa-solid fa-graduation-cap"></i>
+        </div>
+        <div class="logo-text">
+          <span class="brand-ariel">Ariel</span>
+          <span class="brand-academia">Academia</span>
+        </div>
+      </a>
+      
+      <!-- Desktop Navigation -->
+      <nav class="nav-desktop">
+        <a href="#/" class="nav-link active" data-route="/"><i class="fa-solid fa-house"></i> Home</a>
+        <a href="#/programs" class="nav-link" data-route="/programs"><i class="fa-solid fa-book-open"></i> Programs</a>
+        <a href="#/about" class="nav-link" data-route="/about"><i class="fa-solid fa-circle-info"></i> About</a>
+        <a href="#/gallery" class="nav-link" data-route="/gallery"><i class="fa-solid fa-images"></i> Gallery</a>
+        <a href="#/blog" class="nav-link" data-route="/blog"><i class="fa-solid fa-newspaper"></i> Blog</a>
+        <a href="#/verify" class="nav-link" data-route="/verify"><i class="fa-solid fa-certificate"></i> Verify Cert</a>
+        <a href="#/contact" class="nav-link" data-route="/contact"><i class="fa-solid fa-envelope"></i> Contact</a>
+      </nav>
+
+      <!-- User Session Actions / Theme Controls -->
+      <div class="header-actions">
+        <button id="theme-toggle" class="icon-btn" aria-label="Toggle Theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        
+        <div id="auth-nav-container">
+          <!-- Populated by app.js: e.g., Login button or User Profile Dropdown -->
+          <a href="#/login" class="btn btn-primary btn-sm"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-menu-toggle" class="icon-btn mobile-only" aria-label="Toggle Navigation Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Dropdown Navigation -->
+  <div id="mobile-menu" class="mobile-menu-nav">
+    <div class="mobile-menu-header">
+      <div class="logo-text">Ariel Academia</div>
+      <button id="mobile-menu-close" class="icon-btn"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <nav class="mobile-nav-links">
+      <a href="#/" class="mobile-nav-link" data-route="/"><i class="fa-solid fa-house"></i> Home</a>
+      <a href="#/programs" class="mobile-nav-link" data-route="/programs"><i class="fa-solid fa-book-open"></i> Programs</a>
+      <a href="#/about" class="mobile-nav-link" data-route="/about"><i class="fa-solid fa-circle-info"></i> About</a>
+      <a href="#/gallery" class="mobile-nav-link" data-route="/gallery"><i class="fa-solid fa-images"></i> Gallery</a>
+      <a href="#/blog" class="mobile-nav-link" data-route="/blog"><i class="fa-solid fa-newspaper"></i> Blog</a>
+      <a href="#/verify" class="mobile-nav-link" data-route="/verify"><i class="fa-solid fa-certificate"></i> Verify Cert</a>
+      <a href="#/contact" class="mobile-nav-link" data-route="/contact"><i class="fa-solid fa-envelope"></i> Contact</a>
+      <hr class="mobile-divider">
+      <div id="mobile-auth-container">
+        <!-- Populated dynamically -->
+      </div>
+    </nav>
+  </div>
+
+  <!-- Toast Notification System -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Dynamic Views Render Target -->
+  <main id="app" class="app-main-content">
+    <div class="loader-spinner">
+      <div class="spinner"></div>
+      <p>Initializing Ariel Academia...</p>
+    </div>
+  </main>
+
+  <!-- Premium Dynamic Footer -->
+  <footer class="app-footer">
+    <div class="footer-container">
+      <div class="footer-info">
+        <div class="logo-area">
+          <div class="logo-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+          <span class="logo-text font-outfit">Ariel Academia</span>
+        </div>
+        <p class="footer-description">
+          Ariel Academia is a premium EdTech center empowering students, educators, and businesses globally. Home to The Digital Literacy Schools.
+        </p>
+        <div class="footer-socials">
+          <a href="#" class="social-icon" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" class="social-icon" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#" class="social-icon" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="#" class="social-icon" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+        </div>
+      </div>
+      
+      <div class="footer-links-grid">
+        <div class="footer-col">
+          <h4 class="footer-title">Our Schools</h4>
+          <ul class="footer-list">
+            <li><a href="#/programs">Computer Literacy</a></li>
+            <li><a href="#/programs">AI Mini School (AIMS)</a></li>
+            <li><a href="#/programs">Content Creation</a></li>
+            <li><a href="#/programs">School of AI</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4 class="footer-title">Annual Programs</h4>
+          <ul class="footer-list">
+            <li><a href="#/programs">Tech4Students</a></li>
+            <li><a href="#/programs">Tech4Teachers</a></li>
+            <li><a href="#/verify">Certificate Portal</a></li>
+            <li><a href="#/gallery">Impact Gallery</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4 class="footer-title">Company</h4>
+          <ul class="footer-list">
+            <li><a href="#/about">About Us</a></li>
+            <li><a href="#/about">UncleVictor (Founder)</a></li>
+            <li><a href="#/blog">Latest News</a></li>
+            <li><a href="#/contact">Get In Touch</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <div class="footer-bottom-container">
+        <p>&copy; 2026 Ariel Academia. All rights reserved. Empowering future leaders in technology.</p>
+        <div class="footer-bottom-links">
+          <a href="#/privacy">Privacy Policy</a>
+          <a href="#/terms">Terms of Service</a>
+          <span id="pwa-install-badge" class="pwa-badge" style="display: none;">
+            <i class="fa-solid fa-mobile-screen"></i> Install App
+          </span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Chatbot Mount Point -->
+  <div id="chatbot-root"></div>
+
+  <!-- Loading modules -->
+  <script type="module" src="app.js"></script>
+</body>
+</html>

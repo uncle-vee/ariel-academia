@@ -1,0 +1,15 @@
+{
+  "name": "ariel-academia",
+  "version": "1.0.0",
+  "description": "Premium event-centric EdTech platform for Ariel Academia.",
+  "scripts": {
+    "start": "npx -y http-server -p 3000"
+  },
+  "keywords": [
+    "edtech",
+    "pwa",
+    "vanilla-js"
+  ],
+  "author": "UncleVictor",
+  "license": "MIT"
+}
