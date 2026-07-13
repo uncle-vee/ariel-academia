@@ -261,7 +261,7 @@ function renderAbout(container) {
       <div class="founder-layout" style="margin-bottom:5rem;">
         <div class="founder-profile-img-block">
           <div class="glass-card" style="padding:1rem;">
-            <img class="founder-img" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='350' height='450' viewBox='0 0 350 450'><rect width='350' height='450' fill='%236366f1'/><circle cx='175' cy='180' r='80' fill='%230f172a'/><path d='M80 360 C80 280 270 280 270 360' fill='%230f172a'/><text x='50%' y='92%' dominant-baseline='middle' text-anchor='middle' font-family='Outfit' font-size='22' fill='white'>UncleVictor</text></svg>" alt="UncleVictor - Founder">
+            <img class="founder-img" src="assets/unclevictor.png" alt="UncleVictor - Founder">
           </div>
           <h3 style="margin-top:1.5rem;">UncleVictor</h3>
           <p style="color:var(--text-muted); font-size:0.9rem;">Founder, Ariel Academia</p>
