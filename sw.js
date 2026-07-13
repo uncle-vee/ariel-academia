@@ -1,4 +1,4 @@
-const CACHE_NAME = 'ariel-academia-cache-v2';
+const CACHE_NAME = 'ariel-academia-cache-v3';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
@@ -41,6 +41,12 @@ self.addEventListener('activate', (event) => {
 self.addEventListener('fetch', (event) => {
   // Only handle GET requests
   if (event.request.method !== 'GET') return;
+
+  // Bypass cache for browser extensions (chrome-extension://) and non-http protocols
+  const requestUrl = new URL(event.request.url);
+  if (requestUrl.protocol !== 'http:' && requestUrl.protocol !== 'https:') {
+    return;
+  }
 
   event.respondWith(
     fetch(event.request)
