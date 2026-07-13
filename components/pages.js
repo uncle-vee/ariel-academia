@@ -81,7 +81,7 @@ function renderHome(container) {
         
         <div class="hero-visual">
           <div class="glass-card hero-glow-card">
-            <img class="hero-card-img" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='400' viewBox='0 0 600 400'><rect width='600' height='400' fill='%230f172a'/><circle cx='300' cy='200' r='120' fill='none' stroke='%236366f1' stroke-width='4'/><path d='M250 200 L350 200 M300 150 L300 250' stroke='%2310b981' stroke-width='4'/><text x='50%' y='85%' dominant-baseline='middle' text-anchor='middle' font-family='Outfit' font-size='20' fill='%236366f1'>Ariel Academia Center</text></svg>" alt="Ariel Learning Hub">
+            <img class="hero-card-img" src="assets/unclevictor.png,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='400' viewBox='0 0 600 400'><rect width='600' height='400' fill='%230f172a'/><circle cx='300' cy='200' r='120' fill='none' stroke='%236366f1' stroke-width='4'/><path d='M250 200 L350 200 M300 150 L300 250' stroke='%2310b981' stroke-width='4'/><text x='50%' y='85%' dominant-baseline='middle' text-anchor='middle' font-family='Outfit' font-size='20' fill='%236366f1'>Ariel Academia Center</text></svg>" alt="Ariel Learning Hub">
             <div class="hero-card-content">
               <h3>Next-Gen Learning Portal</h3>
               <p style="color:var(--text-secondary); font-size:0.9rem; margin-top:0.25rem;">
@@ -161,13 +161,13 @@ function renderHome(container) {
               <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
             </div>
             <p class="test-quote">
-              "AIMS completely overhauled how my digital agency does graphic designs. We now draft assets using AI workflows in minutes instead of days!"
+              "Before I met Mr. Victor, I thought AI was something only engineers needed to understand. He broke it down with such warmth and clarity that I walked out of his workshop knowing that I could actually use these tools to transform my classroom. He doesn't just train — he inspires."
             </p>
             <div class="test-author">
               <div class="test-author-img" style="background:var(--accent-indigo); display:flex; align-items:center; justify-content:center; color:white; font-weight:bold;">OO</div>
               <div>
-                <h4 class="test-author-name">Oluwaseun O.</h4>
-                <p class="test-author-title">Agency Founder, Lagos</p>
+                <h4 class="test-author-name">Mr. Didam</h4>
+                <p class="test-author-title">Secondary School Teacher</p>
               </div>
             </div>
           </div>
@@ -182,7 +182,7 @@ function renderHome(container) {
             <div class="test-author">
               <div class="test-author-img" style="background:var(--accent-emerald); display:flex; align-items:center; justify-content:center; color:white; font-weight:bold;">CN</div>
               <div>
-                <h4 class="test-author-name">Chidinma N.</h4>
+                <h4 class="test-author-name">Miss. Grace.</h4>
                 <p class="test-author-title">High School Educator, Abuja</p>
               </div>
             </div>
@@ -193,13 +193,13 @@ function renderHome(container) {
               <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
             </div>
             <p class="test-quote">
-              "I registered for Graphics Design with AI under AIMS. Payment was seamless, and the certificate validation portal worked perfectly when I shared it on LinkedIn."
+              "Working with Mr. Victor as our school's academic consultant was one of the best decisions our administration ever made. His strategic insight, combined with his genuine love for education, resulted in visible improvements in both teacher performance and student engagement within just one term.."
             </p>
             <div class="test-author">
               <div class="test-author-img" style="background:var(--accent-pink); display:flex; align-items:center; justify-content:center; color:white; font-weight:bold;">TK</div>
               <div>
-                <h4 class="test-author-name">Tobi K.</h4>
-                <p class="test-author-title">Undergraduate Student, UNILAG</p>
+                <h4 class="test-author-name">Mrs. Kola</h4>
+                <p class="test-author-title">School Principal</p>
               </div>
             </div>
           </div>
@@ -270,13 +270,13 @@ function renderAbout(container) {
         <div class="founder-story">
           <h2>Bridging the Digital Divide</h2>
           <p>
-            Ariel Academia was founded with a clear, singular vision: to make high-quality, practical tech education accessible to every student, teacher, and entrepreneur, regardless of location or prior skills. We believe that technology should be an equalizer, not a barrier.
+            Ariel Academia was founded with a clear, singular vision: to make high-quality, practical tech education accessible to every student, teacher, entrepreneur and institution, regardless of location or prior skills. We believe that technology should be an equalizer, not a barrier.
           </p>
           <div class="founder-quote">
             "True digital literacy is not just knowing how to operate tools; it is understanding how to apply technology to solve local problems, automate businesses, and elevate how we educate the next generation."
           </div>
           <p>
-            Through our specialized training cohorts, namely: <strong>School of Computer Literacy</strong>, <strong>School of Content Creation</strong>, and our premier <strong>School of AI (AI Mini School)</strong>, we train our students in direct, portfolio-driven modules. We also maintain a solid social commitment, hosting two annual free bootcamps: <strong>TECH4STUDENTS</strong> and <strong>TECH4TEACHERS</strong>.
+            Through our specialized training cohorts, namely: <strong>AI Mini School</strong>, <strong>School of Computer Literacy</strong>, <strong>School of Content Creation</strong>, and our premier <strong>School of AI</strong>, we train our students in direct, portfolio-driven modules. We also maintain a solid social commitment, hosting two annual free bootcamps: <strong>TECH4STUDENTS</strong> and <strong>TECH4TEACHERS</strong>.
           </p>
           
           <h3 style="margin-top:2.5rem; margin-bottom:1rem;">Our Core Principles</h3>
@@ -305,7 +305,7 @@ function renderPrograms(container) {
 
   // Split programs by category
   const compLit = events.filter(e => e.category === 'comp-lit');
-  const aims = events.filter(e => e.category === 'aims');
+  const AI = events.filter(e => e.category === 'AI');
   const content = events.filter(e => e.category === 'content-creation');
   const annual = events.filter(e => e.category === 'annual');
 
@@ -332,12 +332,12 @@ function renderPrograms(container) {
 
       <div class="programs-grid">
         
-        <!-- School of AI (AIMS) -->
+        <!-- School of AI  -->
         <div class="glass-card school-block ai">
           <div class="school-header">
             <div class="school-info">
-              <h2 class="school-title">School of AI (AIMS)</h2>
-              <p class="school-desc">The AI Mini School comprises five separate high-fidelity courses empowering designers, writers, and developer enthusiasts.</p>
+              <h2 class="school-title">School of AI</h2>
+              <p class="school-desc">The School of AI comprises four separate high-fidelity courses empowering creatives, designers, writers, and developer enthusiasts.</p>
             </div>
             <span class="hero-badge" style="background:rgba(16,185,129,0.15); border-color:rgba(16,185,129,0.3); color:var(--accent-emerald);">Active Cohort</span>
           </div>
@@ -381,7 +381,7 @@ function renderPrograms(container) {
           <div class="school-header">
             <div class="school-info">
               <h2 class="school-title">School of Content Creation</h2>
-              <p class="school-desc">Learn media assembly, visual lighting setups, color gradings, and distribution funnels.</p>
+              <p class="school-desc">Learn principles of content creation, photography and videography.</p>
             </div>
           </div>
 
@@ -584,13 +584,9 @@ function completeRegistration(course, user, gateway) {
 // -------------------------------------------------------------
 function renderGallery(container) {
   const defaultPhotos = [
-    { title: 'Tech4Teachers Abuja Bootcamp', url: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=600&q=80' },
-    { title: 'Tech4Students Web Lab Session', url: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&q=80' },
-    { title: 'AI Mini School Launch Cohort', url: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80' },
-    { title: 'Graphics Automation Interactive Seminar', url: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80' },
-    { title: 'UncleVictor Presenting AI Curriculum', url: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=600&q=80' },
-    { title: 'Certification Award Ceremony', url: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=600&q=80' }
-  ];
+    { title: 'Tech4Teachers2025 Kaduna', url: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=600&q=80' },
+    { title: 'Tech4Students2025 Kaduna', url: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&q=80' },
+      ];
 
   container.innerHTML = `
     <div class="container">
@@ -713,7 +709,7 @@ function renderSingleBlogPost(container, post) {
           "The response from our partners, students, and hard-working school educators has been monumental. We are expanding our servers and visual classrooms to handle even more applicants in the upcoming session."
         </p>
         <p>
-          Whether you are looking to pivot your career with the AI Mini School (AIMS) or trying to gain fundamental operations fluency in the School of Computer Literacy, our core mission remains unchanged. We provide practical labs, verified certifications, and lifelong resources.
+          Whether you are looking to pivot your career with the School of AI or trying to gain fundamental operations fluency in the School of Computer Literacy, our core mission remains unchanged. We provide practical labs, verified certifications, and lifelong resources.
         </p>
         <p>
           Stay tuned to this channel or check your email logs for upcoming reminder sequences and registration announcements.
@@ -855,7 +851,7 @@ function renderContact(container) {
       <div class="section-header">
         <span class="section-subtitle">Communication</span>
         <h1 class="section-title">Contact &amp; Inquiries</h1>
-        <p style="color:var(--text-secondary);">Have questions about our AI Mini School, sponsorship, or volunteering? Let us know.</p>
+        <p style="color:var(--text-secondary);">Have questions about our School of AI, sponsorship, or volunteering? Let us know.</p>
       </div>
 
       <div class="contact-grid">
@@ -869,15 +865,15 @@ function renderContact(container) {
             <div class="contact-detail-icon"><i class="fa-solid fa-location-dot"></i></div>
             <div class="contact-detail-text">
               <h4>Headquarters</h4>
-              <p>Plot 45, Tech Innovation District, Wuse, Abuja, Nigeria</p>
+              <p>PP3 Trikania, Kaduna, Nigeria</p>
             </div>
           </div>
 
           <div class="contact-detail-item">
             <div class="contact-detail-icon"><i class="fa-solid fa-phone"></i></div>
             <div class="contact-detail-text">
-              <h4>Call Support</h4>
-              <p>+234 812 345 6789 (Mon - Fri, 9am - 5pm NGT)</p>
+              <h4>Contact Support</h4>
+              <p>+234 7057740554 (Mon - Fri, 9am - 5pm NGT)</p>
             </div>
           </div>
 
@@ -885,7 +881,7 @@ function renderContact(container) {
             <div class="contact-detail-icon"><i class="fa-solid fa-envelope"></i></div>
             <div class="contact-detail-text">
               <h4>Electronic Mail</h4>
-              <p>inquiries@ariel.edu | support@ariel.edu</p>
+              <p>thearielacademia@gmail.com | support@arielacademia.edu</p>
             </div>
           </div>
         </div>
