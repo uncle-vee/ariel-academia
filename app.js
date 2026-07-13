@@ -332,11 +332,30 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Service worker check
+  // Service worker registration with automated updates detection
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('./sw.js')
-      .then(() => console.log('Ariel Academia Service Worker Registered'))
-      .catch(err => console.error('Service Worker registration failed:', err));
+    navigator.serviceWorker.register('./sw.js').then((registration) => {
+      console.log('Ariel Academia Service Worker Registered');
+      
+      // Look for new service worker installation
+      registration.onupdatefound = () => {
+        const installingWorker = registration.installing;
+        if (installingWorker) {
+          installingWorker.onstatechange = () => {
+            if (installingWorker.state === 'installed') {
+              if (navigator.serviceWorker.controller) {
+                // Trigger page refresh to purge browser caches
+                console.log('[App] New service worker detected. Force reloading...');
+                window.showToast('Platform update completed. Refreshing page...', 'success');
+                setTimeout(() => {
+                  window.location.reload();
+                }, 1500);
+              }
+            }
+          };
+        }
+      };
+    }).catch(err => console.error('Service Worker registration failed:', err));
   }
 
   // Launch Bot

@@ -1,4 +1,4 @@
-const CACHE_NAME = 'ariel-academia-cache-v3';
+const CACHE_NAME = 'ariel-academia-cache-v4';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
@@ -55,7 +55,11 @@ self.addEventListener('fetch', (event) => {
         if (networkResponse && networkResponse.status === 200) {
           const responseClone = networkResponse.clone();
           caches.open(CACHE_NAME).then((cache) => {
-            cache.put(event.request, responseClone);
+            cache.put(event.request, responseClone).catch((err) => {
+              console.warn('[Service Worker] Cache put ignored:', err.message);
+            });
+          }).catch((err) => {
+            console.warn('[Service Worker] Cache open ignored:', err.message);
           });
         }
         return networkResponse;
