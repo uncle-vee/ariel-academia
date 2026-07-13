@@ -81,7 +81,7 @@ function renderHome(container) {
         
         <div class="hero-visual">
           <div class="glass-card hero-glow-card">
-            <img class="hero-card-img" src="assets/unclevictor.png,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='400' viewBox='0 0 600 400'><rect width='600' height='400' fill='%230f172a'/><circle cx='300' cy='200' r='120' fill='none' stroke='%236366f1' stroke-width='4'/><path d='M250 200 L350 200 M300 150 L300 250' stroke='%2310b981' stroke-width='4'/><text x='50%' y='85%' dominant-baseline='middle' text-anchor='middle' font-family='Outfit' font-size='20' fill='%236366f1'>Ariel Academia Center</text></svg>" alt="Ariel Learning Hub">
+            <img class="hero-card-img" src="assets/unclevictor.png" alt="Ariel Learning Hub">
             <div class="hero-card-content">
               <h3>Next-Gen Learning Portal</h3>
               <p style="color:var(--text-secondary); font-size:0.9rem; margin-top:0.25rem;">
@@ -305,7 +305,7 @@ function renderPrograms(container) {
 
   // Split programs by category
   const compLit = events.filter(e => e.category === 'comp-lit');
-  const AI = events.filter(e => e.category === 'AI');
+  const aims = events.filter(e => e.category === 'aims');
   const content = events.filter(e => e.category === 'content-creation');
   const annual = events.filter(e => e.category === 'annual');
 
