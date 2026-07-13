@@ -66,14 +66,32 @@ class AppStore {
       ] }
     ];
 
-    if (!localStorage.getItem('ariel_events')) localStorage.setItem('ariel_events', JSON.stringify(defaultEvents));
-    if (!localStorage.getItem('ariel_users')) localStorage.setItem('ariel_users', JSON.stringify(defaultUsers));
-    if (!localStorage.getItem('ariel_registrations')) localStorage.setItem('ariel_registrations', JSON.stringify(defaultRegistrations));
-    if (!localStorage.getItem('ariel_certificates')) localStorage.setItem('ariel_certificates', JSON.stringify(defaultCertificates));
-    if (!localStorage.getItem('ariel_emails')) localStorage.setItem('ariel_emails', JSON.stringify(defaultEmails));
-    if (!localStorage.getItem('ariel_blogs')) localStorage.setItem('ariel_blogs', JSON.stringify(defaultBlogs));
-    if (!localStorage.getItem('ariel_marketing')) localStorage.setItem('ariel_marketing', JSON.stringify(defaultMarketingFlows));
-    if (!localStorage.getItem('ariel_subscribers')) localStorage.setItem('ariel_subscribers', JSON.stringify(['newsletter1@gmail.com', 'newsletter2@gmail.com']));
+    const DB_VERSION = 2; // Increment this to force overwrite local storage defaults when code changes
+    const currentDbVersion = localStorage.getItem('ariel_db_version');
+
+    if (currentDbVersion !== String(DB_VERSION)) {
+      // Overwrite static default database entities
+      localStorage.setItem('ariel_events', JSON.stringify(defaultEvents));
+      localStorage.setItem('ariel_blogs', JSON.stringify(defaultBlogs));
+      localStorage.setItem('ariel_marketing', JSON.stringify(defaultMarketingFlows));
+      localStorage.setItem('ariel_db_version', String(DB_VERSION));
+      
+      // Seed users and registrations only if they do not exist
+      if (!localStorage.getItem('ariel_users')) localStorage.setItem('ariel_users', JSON.stringify(defaultUsers));
+      if (!localStorage.getItem('ariel_registrations')) localStorage.setItem('ariel_registrations', JSON.stringify(defaultRegistrations));
+      if (!localStorage.getItem('ariel_certificates')) localStorage.setItem('ariel_certificates', JSON.stringify(defaultCertificates));
+      if (!localStorage.getItem('ariel_emails')) localStorage.setItem('ariel_emails', JSON.stringify(defaultEmails));
+      if (!localStorage.getItem('ariel_subscribers')) localStorage.setItem('ariel_subscribers', JSON.stringify(['newsletter1@gmail.com', 'newsletter2@gmail.com']));
+    } else {
+      if (!localStorage.getItem('ariel_events')) localStorage.setItem('ariel_events', JSON.stringify(defaultEvents));
+      if (!localStorage.getItem('ariel_users')) localStorage.setItem('ariel_users', JSON.stringify(defaultUsers));
+      if (!localStorage.getItem('ariel_registrations')) localStorage.setItem('ariel_registrations', JSON.stringify(defaultRegistrations));
+      if (!localStorage.getItem('ariel_certificates')) localStorage.setItem('ariel_certificates', JSON.stringify(defaultCertificates));
+      if (!localStorage.getItem('ariel_emails')) localStorage.setItem('ariel_emails', JSON.stringify(defaultEmails));
+      if (!localStorage.getItem('ariel_blogs')) localStorage.setItem('ariel_blogs', JSON.stringify(defaultBlogs));
+      if (!localStorage.getItem('ariel_marketing')) localStorage.setItem('ariel_marketing', JSON.stringify(defaultMarketingFlows));
+      if (!localStorage.getItem('ariel_subscribers')) localStorage.setItem('ariel_subscribers', JSON.stringify(['newsletter1@gmail.com', 'newsletter2@gmail.com']));
+    }
 
     // Load session
     this.currentUser = JSON.parse(localStorage.getItem('ariel_current_user')) || null;
